@@ -1,0 +1,8 @@
+scipy==1.9.1
+numpy==1.19.5
+matplotlib==3.5.3
+opencv_python==4.5.5.62
+tensorflow_gpu==2.5.0
+tqdm==4.46.1
+Pillow==8.2.0
+h5py==2.10.0

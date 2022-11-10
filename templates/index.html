@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>Tensorflow2.x object detection</title>
+</head>
+<style>
+    #from {
+        width: 20%;
+        height: 30px;
+        background-color: #95d4ff;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #sub {
+        background-color: #6dc4fe;
+        width: 100px;
+        border-radius: 5px;
+        border-color: aliceblue;
+    }
+
+    #res_img {
+        width: 60%;
+        background-color: #95d4ff;
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        max-height: 100%;
+    }
+</style>
+<body>
+<form action="http://192.168.199.103:80/img" method="post" enctype="multipart/form-data" id="from">
+    <input type="file" name="file" id="file">
+    <input type="button" value="检测🚀" id="sub" onclick="file_fun()">
+</form>
+<div id="res_img">
+    <div>
+        <strong>检测结果:</strong>
+        <strong id="res">
+            {{ res }}
+        </strong>
+    </div>
+    <br>
+    <img src="data:;base64,{{ img_stream }}">
+</div>
+</body>
+<script>
+    function file_fun() {
+        file = document.getElementById("file")[0].files[0]
+        if (file == undefined) {
+            alert("你选择检测的图像啊，不然我怎么看")
+        } else {
+            document.getElementById("from").submit()
+            alert("来！让我看看")
+        }
+    }
+</script>
+</html>
