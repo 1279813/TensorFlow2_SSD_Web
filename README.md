@@ -17,7 +17,7 @@
     2、classes文件夹内存放自己数据集对应的标注类别
     
     2、数据集VOCdevkit结构
-        - VOC2007          根目录
+        - VOC2007
         - Annotations      存放标注xml文件
         - ImageSets/Main   存放训练索引文件
         - JPEGImages       存放图片
